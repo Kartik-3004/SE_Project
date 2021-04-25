@@ -11,7 +11,7 @@ const Header = (props) => {
 						props.setPage(0);
 					}}
 				>
-					Room Booking System
+					kartik madarchod hai
 				</NavbarBrand>
 			</Navbar>
 		</div>
