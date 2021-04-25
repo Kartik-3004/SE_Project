@@ -1,12 +1,34 @@
 import React from 'react';
-import Header from './Navbar';
+import { Row, Col, Button } from 'reactstrap';
 
-const Home = () => {
+const Home = (props) => {
 	return (
 		<div>
-			<div>
-				<Header />
-			</div>
+			<Row noGutters className="text-center align-items-center room-cta">
+				<Col>
+					<p className="description">
+						If you're looking to book a room
+					</p>
+					<Button
+						color="none"
+						className="book-room-btn"
+						onClick={(_) => {
+							props.setPage(1);
+						}}
+					>
+						Book a Room
+					</Button>
+				</Col>
+			</Row>
+			<Row noGutters className="text-center big-img-container">
+				<Col>
+					<img
+						src={require('../assets/background.png')}
+						alt="IITJ"
+						className="big-img"
+					/>
+				</Col>
+			</Row>
 		</div>
 	);
 };
