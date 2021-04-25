@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
 import Home from './pages/Home';
-import Book from './components/Book';
-import ThankYou from './components/ThankYou';
-import Header from './components/Navbar';
+import Book from './pages/Book';
+import ThankYou from './pages/ThankYou';
+import Header from './pages/Navbar';
 
 function App() {
 	const [page, setPage] = useState(0);
