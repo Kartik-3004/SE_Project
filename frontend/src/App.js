@@ -1,15 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React, { useState } from 'react';
 import './App.css';
 import Home from './pages/Home';
+import Book from './components/Book';
+import ThankYou from './components/ThankYou';
+import Header from './components/Navbar';
 
 function App() {
+	const [page, setPage] = useState(0);
 	return (
-		<Router>
-			<Switch>
-				<Route path="/" component={Home} />
-			</Switch>
-		</Router>
+		<div>
+			<Header setPage={setPage} />
+			{page === 0 ? <Home setPage={setPage} /> : null}
+			{page === 1 ? <Book setPage={setPage} /> : null}
+			{page === 2 ? <ThankYou /> : null}
+		</div>
 	);
 }
 
