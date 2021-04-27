@@ -1,5 +1,8 @@
 import React from 'react';
 import { Row, Col, Button } from 'reactstrap';
+import iitj from '../assets/iitj.jpeg'
+
+// const iitj = require('../assets/iitj.jpeg');
 
 const Home = (props) => {
 	return (
@@ -23,7 +26,7 @@ const Home = (props) => {
 			<Row noGutters className="text-center big-img-container">
 				<Col>
 					<img
-						src={require('../assets/background.png')}
+						src={iitj}
 						alt="IITJ"
 						className="big-img"
 					/>
