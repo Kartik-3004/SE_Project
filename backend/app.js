@@ -22,7 +22,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 //Routes
-app.use('/', require('./routes/reservationRoute'));
+app.use('/reserve', require('./routes/reservationRoute'));
+app.use('/availability', require('./routes/availabilityRoute'));
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', (_) => {
 	console.log('Connected to DB');
