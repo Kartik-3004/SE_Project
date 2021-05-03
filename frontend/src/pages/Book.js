@@ -17,7 +17,7 @@ const Book = (props) => {
 
 	// User's selections
 	const [selection, setSelection] = useState({
-		table: {
+		room: {
 			name: null,
 			id: null,
 		},
@@ -91,7 +91,7 @@ const Book = (props) => {
 	};
 
 	useEffect(() => {
-		// Check availability of tables from DB when a date and time is selected
+		// Check availability of rooms from DB when a date and time is selected
 		if (selection.time && selection.date) {
 			(async (_) => {
 				const datetime = getDate();
@@ -105,7 +105,7 @@ const Book = (props) => {
 					}),
 				});
 				res = await res.json();
-				// Filter available tables with location and group size criteria
+				// Filter available rooms with location and group size criteria
 				let rooms = res.rooms.filter(
 					(room) =>
 						(selection.size > 0
@@ -149,7 +149,7 @@ const Book = (props) => {
 		}
 	};
 
-	// Clicking on a table sets the selection state
+	// Clicking on a room sets the selection state
 	const selectRoom = (room_name, room_id) => {
 		setSelection({
 			...selection,
@@ -239,7 +239,7 @@ const Book = (props) => {
 		return newTimes;
 	};
 
-	// Generating tables from available tables state
+	// Generating rooms from available rooms state
 	const getRooms = (_) => {
 		console.log('Getting Rooms');
 		if (getEmptyRooms() > 0) {
@@ -276,17 +276,10 @@ const Book = (props) => {
 		<div>
 			<Row noGutters className="text-center align-items-center room-cta">
 				<Col>
-					<p className="looking-for-pizza">
+					<p className="description">
 						{!selection.room.id
 							? 'Book a Room'
 							: 'Confirm Reservation'}
-						<i
-							className={
-								!selection.room.id
-									? 'fas fa-bed pizza-slice'
-									: 'fas fa-clipboard-check pizza-slice'
-							}
-						></i>
 					</p>
 					<p className="selected-room">
 						{selection.room.id
@@ -302,7 +295,7 @@ const Book = (props) => {
 				</Col>
 			</Row>
 
-			{!selection.table.id ? (
+			{!selection.room.id ? (
 				<div id="reservation-stuff">
 					<Row noGutters className="text-center align-items-center">
 						<Col xs="12" sm="3">

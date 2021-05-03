@@ -6,7 +6,7 @@ const Home = (props) => {
 	return (
 		<div>
 			<Row noGutters className="text-center align-items-center room-cta">
-				<Col className="btn-col">
+				<Col>
 					<p className="description">
 						If you're looking to book a room
 					</p>
