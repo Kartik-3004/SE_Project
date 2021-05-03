@@ -8,7 +8,7 @@ const Room = (props) => {
 			chairs.push(
 				<span
 					key={i}
-					className={props.empty ? 'empty-table' : 'full-table'}
+					className={props.empty ? 'empty-room' : 'full-room'}
 				></span>
 			);
 		}
@@ -20,30 +20,30 @@ const Room = (props) => {
 			chairs2.push(
 				<span
 					key={i}
-					className={props.empty ? 'empty-table' : 'full-table'}
+					className={props.empty ? 'empty-room' : 'full-room'}
 				></span>
 			);
 		}
 		return chairs2;
 	};
 	return (
-		<div className="table-container">
+		<div className="room-container">
 			<Col
-				className={props.empty ? 'table selectable-table' : 'table'}
+				className={props.empty ? 'room selectable-room' : 'room'}
 				onClick={(_) => {
 					props.empty
-						? props.selectTable(props.name, props.id)
-						: console.log('Tried to select a full table');
+						? props.selectRoom(props.name, props.id)
+						: console.log('Tried to select a full room');
 				}}
 			>
-				<Row noGutters className="table-row">
+				<Row noGutters className="room-row">
 					<Col className="text-center">{getRow1()}</Col>
 				</Row>
-				<Row noGutters className="table-row">
+				<Row noGutters className="room-row">
 					<Col className="text-center">{getRow2()}</Col>
 				</Row>
 
-				<p className="text-center table-name">{props.name}</p>
+				<p className="text-center room-name">{props.name}</p>
 			</Col>
 		</div>
 	);
