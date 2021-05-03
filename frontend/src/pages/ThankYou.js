@@ -1,11 +1,18 @@
 import React from 'react';
+import { Row, Col } from 'reactstrap';
 
 const ThankYou = () => {
 	return (
 		<div>
-			<div>
-				<h1>ThankYou</h1>
-			</div>
+			<Row noGutters className="text-center">
+				<Col>
+					<p className="thanks-header">Thank You!</p>
+					<p className="thanks-subtext">
+						You should receive an email with the details of your
+						reservation.
+					</p>
+				</Col>
+			</Row>
 		</div>
 	);
 };
