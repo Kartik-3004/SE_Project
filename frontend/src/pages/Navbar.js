@@ -4,7 +4,7 @@ import { Navbar, NavbarBrand } from 'reactstrap';
 const Header = (props) => {
 	return (
 		<div>
-			<Navbar color="light" light expand="md">
+			<Navbar light expand="md" className="navbar">
 				<NavbarBrand
 					className="nav-brand"
 					onClick={(_) => {

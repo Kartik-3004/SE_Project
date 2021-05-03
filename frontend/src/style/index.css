@@ -2,9 +2,17 @@ body {
 	font-family: ABeeZee, sans-serif;
 }
 
+/* Navbar */
+
+.navbar {
+	background-color: #1597bb;
+}
+
 .nav-brand {
 	cursor: pointer;
 	font-size: 1.5rem;
+	font-family: 'Kaushan Script', cursive;
+	margin-left: 4%;
 }
 
 @media (min-width: 768px) {
@@ -18,8 +26,12 @@ body {
 	}
 }
 
+/* Home Page */
+
 .room-cta {
-	padding-top: 4%;
+	padding: 4% 4%;
+	flex-direction: column;
+	align-items: center;
 }
 
 .description {
@@ -51,16 +63,141 @@ body {
 	}
 }
 .big-img-container {
-	padding: 10% 0;
+	padding: 5% 0;
 }
 
 @media (min-width: 768px) {
 	.big-img-container {
-		padding: 4% 0;
+		padding: 0 0;
 	}
 }
 .big-img {
-	width: 96%;
+	width: 70%;
+	height: 78%;
 	border-radius: 25px;
 	border-bottom-left-radius: 25px;
+}
+
+/* Booking Page */
+
+.selected-room {
+	font-size: 1.25rem;
+	padding-bottom: 2%;
+}
+
+/* Dropdowns */
+
+.booking-dropdown {
+	width: 85%;
+	padding: 4% 0;
+	background-color: #1597bb;
+	color: white;
+	margin: 2% 0;
+	font-family: 'Roboto';
+	font-size: 1.1rem;
+	border: none;
+	border-radius: 5px;
+	text-align: center;
+}
+.booking-dropdown:hover {
+	background-color: #1597bb;
+	color: white;
+}
+.booking-dropdown:focus {
+	outline: none;
+	box-shadow: none;
+}
+.booking-dropdown-menu {
+	outline: none;
+}
+.booking-dropdown-item:hover {
+	background-color: white;
+}
+.booking-dropdown-item:active {
+	background-color: white;
+	color: black;
+}
+
+@media (min-width: 768px) {
+	.booking-dropdown {
+		font-size: 1.2rem;
+	}
+}
+
+/* Rooms Display */
+
+.room-display-message {
+	padding: 2% 0;
+	text-align: center;
+	font-size: 1.3rem;
+	color: white;
+}
+
+.rooms-display {
+	background-color: #1597bb;
+	margin: 10% 2%;
+	padding: 3% 5%;
+	border-radius: 25px;
+}
+
+@media (min-width: 768px) {
+	.rooms-display {
+		margin: 6% 2.5%;
+	}
+}
+.room-key {
+	padding-top: 1%;
+	padding-bottom: 4.5%;
+	color: white;
+}
+
+.available-rooms {
+	color: white;
+	font-size: 1.2rem;
+	font-family: Roboto, sans-serif;
+}
+
+.room-container {
+	margin: 0 1%;
+}
+
+.room {
+	background-color: rgba(245, 246, 250, 0.4);
+	padding: 15px;
+	border-radius: 25px;
+	min-width: 80px;
+}
+
+.room-row {
+	margin-bottom: 8px;
+}
+
+.selectable-room:hover {
+	cursor: pointer;
+}
+.selectable-room:hover-row {
+	padding: 5px;
+}
+
+.full-room {
+	background-color: white;
+	border: solid 2px white;
+	border-radius: 50%;
+	padding: 1px 10px;
+	margin: 3px;
+}
+
+.empty-room {
+	background-color: #1597bb;
+	border: solid 2px white;
+	border-radius: 50%;
+	padding: 1px 10px;
+	margin: 3px;
+}
+
+.room-name {
+	color: white;
+	font-size: 0.8rem;
+	padding-top: 15px;
+	font-family: Roboto, sans-serif;
 }
