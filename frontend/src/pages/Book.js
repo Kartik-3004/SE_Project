@@ -131,6 +131,7 @@ const Book = (props) => {
 			console.log('Incomplete Details');
 			setReservationError(true);
 		} else {
+			console.log('Happen');
 			const datetime = getDate();
 			let res = await fetch('http://localhost:1853/reserve', {
 				method: 'POST',
