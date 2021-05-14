@@ -26,7 +26,7 @@ router.post('/', function (req, res, next) {
 				const allRooms = require('../data/allRooms');
 				const day = new Day({
 					date: dateTime,
-					Rooms: allRooms,
+					rooms: allRooms,
 				});
 				day.save((err) => {
 					if (err) {

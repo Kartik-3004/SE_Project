@@ -7,11 +7,19 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+const DB = process.env.MONGO_URL;
+
 //MongoDB
-mongoose.connect(process.env.MONGO_URL, {
-	useUnifiedTopology: true,
-	useNewUrlParser: true,
-});
+mongoose
+	.connect(DB, {
+		useUnifiedTopology: true,
+		useNewUrlParser: true,
+	})
+	.then(() => {
+		console.log('Connection Successful');
+	})
+	.catch((err) => console.log(err));
+
 const db = mongoose.connection;
 
 const app = express();

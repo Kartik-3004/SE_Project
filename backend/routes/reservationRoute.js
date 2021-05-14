@@ -8,7 +8,7 @@ const Reservation = require('../models/reservation').model;
 // Parameters:
 // {
 //   "date": String ("Dec 02 2019 06:00"),
-//   "table": table id,
+//   "room": room id,
 // 	"name": String,
 // 	"phone": String,
 // 	"email": String
@@ -19,9 +19,9 @@ router.post('/', function (req, res, next) {
 		if (!err) {
 			if (days.length > 0) {
 				let day = days[0];
-				day.rooms.forEach((table) => {
+				day.rooms.forEach((room) => {
 					if (room._id == req.body.room) {
-						// The correct table is table
+						// The correct room is room
 						room.reservation = new Reservation({
 							name: req.body.name,
 							phone: req.body.phone,
