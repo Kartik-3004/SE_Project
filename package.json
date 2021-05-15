@@ -30,7 +30,7 @@
     "dev": "nodemon ./bin/www",
     "create-data": "node data/generateFakeData.js"
   },
-    "eslintConfig": {
+  "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
