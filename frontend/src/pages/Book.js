@@ -35,7 +35,12 @@ const Book = (props) => {
 	});
 
 	// List of potential locations
-	const [locations] = useState(['Any Location', 'Patio', 'Inside', 'Bar']);
+	const [locations] = useState([
+		'Any Location',
+		'1st Floor',
+		'2nd Floor',
+		'3rd Floor',
+	]);
 	const [times] = useState([
 		'9AM',
 		'10AM',
@@ -282,6 +287,7 @@ const Book = (props) => {
 							? 'Book a Room'
 							: 'Confirm Reservation'}
 					</p>
+
 					<p className="selected-room">
 						{selection.room.id
 							? 'You are booking room ' + selection.room.name
@@ -303,7 +309,7 @@ const Book = (props) => {
 							<input
 								type="date"
 								required="required"
-								className="booking-dropdown"
+								className="booking-dropdown unstyled"
 								value={
 									selection.date.toISOString().split('T')[0]
 								}
@@ -379,7 +385,7 @@ const Book = (props) => {
 									className="booking-dropdown"
 								>
 									{selection.size === 0
-										? 'Select a Party Size'
+										? 'Select a Room Size'
 										: selection.size.toString()}
 								</DropdownToggle>
 								<DropdownMenu
@@ -398,7 +404,6 @@ const Book = (props) => {
 									{getEmptyRooms()} available
 								</p>
 							) : null}
-
 							{selection.date && selection.time ? (
 								getEmptyRooms() > 0 ? (
 									<div>
@@ -406,7 +411,9 @@ const Book = (props) => {
 											<span className="empty-room"></span>{' '}
 											&nbsp; Available &nbsp;&nbsp;
 											<span className="full-room"></span>{' '}
-											&nbsp; Unavailable &nbsp;&nbsp;
+											&nbsp; Unavailable &nbsp;&nbsp;{' '}
+											&nbsp; Each circle represents 50
+											capacity &nbsp;&nbsp;
 										</div>
 										<Row noGutters>{getRooms()}</Row>
 									</div>

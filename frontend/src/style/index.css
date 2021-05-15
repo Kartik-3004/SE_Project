@@ -93,6 +93,15 @@ body {
 
 /* Dropdowns */
 
+.unstyled {
+	-webkit-appearance: none;
+}
+.unstyled::-webkit-inner-spin-button,
+.unstyled::-webkit-calendar-picker-indicator {
+	display: none;
+	-webkit-appearance: none;
+}
+
 .booking-dropdown {
 	width: 85%;
 	padding: 4% 0;
@@ -176,6 +185,10 @@ body {
 
 .room-row {
 	margin-bottom: 8px;
+}
+
+.selectable-room {
+	margin: 5px;
 }
 
 .selectable-room:hover {
