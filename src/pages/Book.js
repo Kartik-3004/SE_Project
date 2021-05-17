@@ -110,6 +110,7 @@ const Book = (props) => {
 					}),
 				});
 				res = await res.json();
+				console.log(res);
 				// Filter available rooms with location and group size criteria
 				let rooms = res.rooms.filter(
 					(room) =>
@@ -136,7 +137,6 @@ const Book = (props) => {
 			console.log('Incomplete Details');
 			setReservationError(true);
 		} else {
-			console.log('Happen');
 			const datetime = getDate();
 			let res = await fetch('http://localhost:1853/reserve', {
 				method: 'POST',
