@@ -7,7 +7,7 @@ const Reservation = require('../models/reservation').model;
 
 // Parameters:
 // {
-//   "date": String ("Dec 02 2019 06:00"),
+//   "date": String ("Apr 30 2021 06:00"),
 //   "room": room id,
 // 	"name": String,
 // 	"phone": String,
